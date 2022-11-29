@@ -29,7 +29,7 @@ module use $BASEDIR/add-modules/py$shortversion
 EOF
 
 # install python
-false &&
+true &&
 cd $TMP &&
 wget https://www.python.org/ftp/python/$version/Python-$version.tgz &&
 tar xzf Python-$version.tgz &&
