@@ -1,6 +1,3 @@
-export TMPDIR="/scratch/$USER/tmp"
-
-
 BASEDIR=$(cd .. && pwd)
 
 for cuda in 9.0 9.1 10.0 10.1
@@ -37,15 +34,8 @@ module load $module/$version
 
 # install packages
 true &&
-TMP="$(mktemp -d)" &&
-cd $TMP &&
-git clone https://github.com/cudamat/cudamat.git
-cd cudamat
-git checkout 21baa0a82f189fae40cab3ab607c11cabfee8899
-rm -fr .git
-pip3 install --ignore-installed --prefix=$prefix .
+pip3 install --ignore-installed --prefix=$prefix https://github.com/cudamat/cudamat/archive/21baa0a82f189fae40cab3ab607c11cabfee8899.tar.gz &&
 chmod -R a-w $prefix &&
-chmod -R a+rX $prefix &&
-rm -fr $TMP
+chmod -R a+rX $prefix
 )
 done
