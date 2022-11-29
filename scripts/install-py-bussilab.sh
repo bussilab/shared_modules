@@ -39,8 +39,7 @@ module load $module/$version
 
 # install packages
 true &&
-pip3 install --ignore-installed --prefix=$prefix $packages &&
-pip3 freeze > $requirements &&
+pip3 install --no-deps --ignore-installed --prefix=$prefix $packages &&
 chmod -R a-w $prefix &&
 chmod -R a+rX $prefix
 
