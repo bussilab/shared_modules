@@ -1,6 +1,7 @@
 # Group modules
 
 These are instruction on how to use modules that are installed at SISSA, both on workstations and on hpc cluster, and are meant to be used within the group.
+The [scripts](./scripts) directory contains the scripts that were used to install the modules.
 
 ## Enabling this set of modules
 
@@ -31,6 +32,10 @@ This is versioned according to the date on which the tools were packages were in
 It contains a number of general purpose tools (numpy, pandas, jupyter, barnaba, etc).
 Notice that, due to the way the PYTHONPATH environment variable work, it is easy to override
 these modules with more recent versions if you need them.
+
+When this module is installed first, a new file is written in the [scripts](./scripts) directory
+documenting the exact version of each tool. For instance,
+[this is the file](./scripts/py-base-2022.11.29-requirements.txt) corresponding to the module installed on Nov 29, 2022.
 
 #### Group tools
 ```
