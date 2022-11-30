@@ -23,6 +23,7 @@ module load python/3.9
 ```
 
 Once loaded, other modules will become available and compatible with this python version.
+Notice that executable is named `python3`, and not `python`!
 
 #### Basic python modules
 ```
