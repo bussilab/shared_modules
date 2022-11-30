@@ -64,7 +64,7 @@ module load plumed
 ```
 Versioned according to PLUMED version. We might have more ad hoc versions in the future. It should be possible to combine any PLUMED version with any GROMACS version.
 
-It is also recommended to setup [plumed command autocompletion](https://www.plumed.org/doc-v2.8/user-doc/html/_bash_autocompletion.html) and, if you are using VIM, [vim syntax](https://www.plumed.org/doc-v2.8/user-doc/html/_vim_syntax.html). This has to be done once in your `.bashrc` file.
+It is also recommended to setup [plumed command autocompletion](https://www.plumed.org/doc-v2.8/user-doc/html/_bash_autocompletion.html) and, if you are using VIM, [vim syntax](https://www.plumed.org/doc-v2.8/user-doc/html/_vim_syntax.html). This has to be done once in your `.bashrc` and `.vimrc` files.
 
 
 ### ViennaRNA
