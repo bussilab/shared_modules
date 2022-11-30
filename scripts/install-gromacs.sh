@@ -59,7 +59,7 @@ chmod -R a+rX $prefix &&
 rm -fr $TMP
 
 mkdir -p $moduledir
-cat > $moduledir/$version << EOF
+cat > $moduledir/$fullversion << EOF
 #%Module1.0##############################################
 
 conflict gromacs
