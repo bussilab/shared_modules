@@ -33,7 +33,7 @@ EOF
 # install python
 true &&
 cd $TMP &&
-wget https://www.python.org/ftp/python/$version/Python-$version.tgz &&
+curl -LO https://www.python.org/ftp/python/$version/Python-$version.tgz &&
 tar xzf Python-$version.tgz &&
 cd Python-$version &&
 ./configure --prefix=$prefix &&

@@ -17,7 +17,7 @@ module load openmpi3/3.1.4
 # install
 true &&
 cd $TMP &&
-wget https://github.com/plumed/plumed2/releases/download/v$version/plumed-$version.tgz &&
+curl -LO https://github.com/plumed/plumed2/releases/download/v$version/plumed-$version.tgz &&
 tar xzf plumed-$version.tgz &&
 cd plumed-$version &&
 ./configure --prefix=$prefix --enable-rpath --enable-modules=all &&

@@ -25,11 +25,11 @@ CPATH=$CPATH:$MPI_DIR/include
 # install
 true &&
 cd $TMP &&
-wget https://ftp.gromacs.org/gromacs/gromacs-$version.tar.gz &&
+curl -LO https://ftp.gromacs.org/gromacs/gromacs-$version.tar.gz &&
 tar xzf gromacs-$version.tar.gz &&
 cd gromacs-$version &&
 bash <(curl -s https://raw.githubusercontent.com/bussilab/crescale-gromacs/readme/patch-v2020.6) &&
-plumed patch -p --runtime -e gromacs-2020.7 &&
+plumed-patch -p --runtime -e gromacs-2020.7 &&
 mkdir build-sp &&
 cd build-sp &&
 cmake .. \
