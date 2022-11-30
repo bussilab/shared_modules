@@ -8,7 +8,8 @@ version=2.8.1
 shortversion=2.8
 
 prefix=$BASEDIR/install/plumed-$version
-moduledir=$BASEDIR/modules/plumed/$shortversion
+moduledirbase=$BASEDIR/modules/plumed
+moduledir=$moduledirbase/$shortversion
 module purge
 module load intel/2021.2
 module load openmpi3/3.1.4
@@ -19,7 +20,7 @@ cd $TMP &&
 wget https://github.com/plumed/plumed2/releases/download/v$version/plumed-$version.tgz &&
 tar xzf plumed-$version.tgz &&
 cd plumed-$version &&
-./configure --prefix=$prefix --enable-rpath --enable-modules=all
+./configure --prefix=$prefix --enable-rpath --enable-modules=all &&
 make -j 12 &&
 make install &&
 chmod -R a-w $prefix &&
@@ -35,4 +36,5 @@ awk '
   } 
 ' < $prefix/lib/plumed/modulefile > $moduledir/$version
 
+touch $moduledirbase/.version
 

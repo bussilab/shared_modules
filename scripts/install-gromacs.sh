@@ -9,7 +9,8 @@ shortversion=2020
 
 fullversion=$version-cr-p-2.8.1
 prefix=$BASEDIR/install/gromacs-$fullversion
-moduledir=$BASEDIR/modules/gromacs/$shortversion
+moduledirbase=$BASEDIR/modules/gromacs
+moduledir=$moduledirbase/$shortversion
 module use $BASEDIR/modules
 module purge
 module load cmake
@@ -22,7 +23,7 @@ module load plumed/2.8/2.8.1
 CPATH=$CPATH:$MPI_DIR/include
 
 # install
-false &&
+true &&
 cd $TMP &&
 wget https://ftp.gromacs.org/gromacs/gromacs-$version.tar.gz &&
 tar xzf gromacs-$version.tar.gz &&
@@ -78,6 +79,5 @@ prepend-path  PATH             $prefix/bin
 prepend-path  GMXLIB           $prefix/share/gromacs/top/
 EOF
 
-
-
+touch $moduledirbase/.version
 

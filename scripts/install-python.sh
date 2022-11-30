@@ -8,10 +8,12 @@ version=3.9.14
 shortversion=3.9
 
 prefix=$BASEDIR/install/python-$version
-moduledir=$BASEDIR/modules/python/$shortversion
+moduledirbase=$BASEDIR/modules/python
+moduledir=$moduledirbase/$shortversion
 
 #install modulefile
 mkdir -p $moduledir
+touch $moduledirbase/.version
 cat > $moduledir/$version << EOF
 #%Module1.0##############################################
 
