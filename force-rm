@@ -1,0 +1,10 @@
+#! /bin/bash
+
+for file_ in "$@"
+do
+  file=${file_%/}
+  echo $file
+  mv "$file" "$file".rm.$$
+  chmod -R u+w "$file".rm.$$
+  rm -fr "$file".rm.$$
+done
