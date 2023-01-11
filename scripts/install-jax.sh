@@ -30,6 +30,8 @@ module-whatis   "jax $jax_version and jaxlib $jaxlib_version"
 prepend-path    PATH            $prefix/bin
 prepend-path    PYTHONPATH      $prefix/lib/python$pyversion/site-packages
 prepend-path    LD_LIBRARY_PATH $prefix/lib:$prefix/lib64
+depends-on cuda/10.1
+depends-on py-base
 EOF
 
 module purge
