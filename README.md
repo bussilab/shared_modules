@@ -52,6 +52,13 @@ module load cudamat
 ```
 Versioned according to the date and on the cuda drivers used.
 
+#### JAXS
+```
+module load jaxs
+```
+Versioned according to the version of both jax and jaxlib. Notice that, in order to use the cuda version
+currently available on our machines, older jax/jaxlib versions are installed
+
 ### GROMACS
 ```
 module load gromacs
