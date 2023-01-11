@@ -52,9 +52,9 @@ module load cudamat
 ```
 Versioned according to the date and on the cuda drivers used.
 
-#### JAXS
+#### JAX
 ```
-module load jaxs
+module load jax
 ```
 Versioned according to the version of both jax and jaxlib. Notice that, in order to use the cuda version
 currently available on our machines, older jax/jaxlib versions are installed
