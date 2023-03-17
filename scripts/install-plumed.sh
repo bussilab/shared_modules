@@ -4,7 +4,7 @@ TMP="$(mktemp -d)"
 
 BASEDIR=$(cd .. && pwd)
 
-version=2.8.1
+version=2.8.2
 shortversion=2.8
 
 prefix=$BASEDIR/install/plumed-$version
@@ -13,6 +13,8 @@ moduledir=$moduledirbase/$shortversion
 module purge
 module load intel/2021.2
 module load openmpi3/3.1.4
+
+umask 022
 
 # install
 true &&
