@@ -63,13 +63,16 @@ currently available on our machines, older jax/jaxlib versions are installed
 ```
 module load gromacs
 ```
-Versioned according to (a) the GROMACS version (b) if it has been patched with [crescale](https://github.com/bussilab/crescale) barostat and (c) which version of PLUMED was used for patching. For instance: `gromacs/2020/2020.7-cr-p-2.8.1` was patched with plumed 2.8.1 and implements crescale. Notice that one can load a different version of PLUMED by loading a suitable module. However, it is important to record which version of PLUMED was used for patching since patches themselves evolve with time.
+Versioned according to the GROMACS version and possible modifications. Notice that one can load a different version of PLUMED by loading a suitable module. However, it is important to record which version of PLUMED was used for patching since patches themselves evolve with time:
+- `gromacs/2020/2020.7-cr-p-2.8.1` version 2020.7, patched with plumed 2.8.1 (compatible with any plumed version) and with [crescale](https://github.com/bussilab/crescale) barostat (will be available by default in version 2021).
 
 ### PLUMED
 ```
 module load plumed
 ```
-Versioned according to PLUMED version. We might have more ad hoc versions in the future. It should be possible to combine any PLUMED version with any GROMACS version.
+Versioned according to PLUMED version. We might have more ad hoc versions in the future. It should be possible to combine any PLUMED version with any GROMACS version:
+- `plumed/2.8/2.8.1` version 2.8.1, all external modules enabled
+- `plumed/2.8/2.8.2` version 2.8.2, all external modules enabled
 
 It is also recommended to setup [plumed command autocompletion](https://www.plumed.org/doc-v2.8/user-doc/html/_bash_autocompletion.html) and, if you are using VIM, [vim syntax](https://www.plumed.org/doc-v2.8/user-doc/html/_vim_syntax.html). This has to be done once in your `.bashrc` and `.vimrc` files.
 
