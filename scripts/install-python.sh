@@ -7,8 +7,8 @@ TMP="$(mktemp -d)"
 
 BASEDIR=$(cd .. && pwd)
 
-versions="3.9.14 3.9.15"
-versions=3.9.15
+versions="3.9.14 3.9.15 3.9.16"
+versions=3.9.16
 
 for version in $versions
 do
