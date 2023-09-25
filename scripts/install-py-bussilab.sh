@@ -1,7 +1,7 @@
 BASEDIR=$(cd .. && pwd)
 
 pyversion=3.9
-version=0.0.41
+version=0.0.44
 module=py-bussilab
 
 prefix=$BASEDIR/install/py$pyversion-$module-$version
